@@ -1,11 +1,13 @@
 import { ContainerWrapper } from "../components/Global/Global"
+import { Header } from "../components/Navigation/Header"
 
 export const LandingPage = () => {
     return (
         <>
             <ContainerWrapper >
-                <h1>Hello World</h1>
+                
                 {/* <Navigation /> */}
+                <Header />
                 {/* <Hero /> */}
                 {/* <Numbers /> */}
                 {/* <Built for Local Hustlers. Designed for Global Possibilities. /> */}

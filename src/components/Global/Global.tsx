@@ -6,7 +6,7 @@ interface ContainerWrapperProps {
 
 export const ContainerWrapper: React.FC<ContainerWrapperProps> = ({children}) => {
     return (
-        <section className="px-8 bg-red-200">
+        <section className="px-8">
             {children}
         </section>
     );

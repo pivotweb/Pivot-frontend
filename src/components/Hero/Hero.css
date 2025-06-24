@@ -1,0 +1,26 @@
+
+.hero-bg {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 20px;
+    /* background: url('./assets/d0741e7f8e8c89079a86f56c4f156416.jpeg') center center no-repeat; */
+    background: linear-gradient(
+        180deg,
+        #F06621 1.98%,
+        rgba(255, 255, 255, 0.622) 95.47%
+        ),
+        url("./assets/d0741e7f8e8c89079a86f56c4f156416.jpeg") center center
+        no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

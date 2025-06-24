@@ -1,6 +1,7 @@
 import { ContainerWrapper } from "../components/Global/Global"
 import { Hero } from "../components/Hero/Hero"
 import { Header } from "../components/Navigation/Header"
+import { Numbers } from "../components/Numbers/Numbers"
 
 export const LandingPage = () => {
     return (
@@ -14,7 +15,7 @@ export const LandingPage = () => {
                 <Hero />
 
                 {/* <Numbers /> */}
-                
+                <Numbers />
 
                 {/* <Built for Local Hustlers. Designed for Global Possibilities. /> */}
                 {/* <The 2025 Edition:  /> */}

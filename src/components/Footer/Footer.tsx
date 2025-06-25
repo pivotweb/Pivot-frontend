@@ -5,7 +5,7 @@ import { FaFacebook } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io5";
 import { FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import Logo from '/Logo.png'
+import Logo from '/images/logo2.jpeg'
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -27,7 +27,7 @@ const handleSubscribe = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => 
             {/* Left Section - Newsletter */}
             <div className="Newsletter">
               <div className="Newsletter-header">
-                <img src={Logo} alt="Logo" />
+                <img src={Logo} alt="Logo"/>
               </div>
               
               <div className="Deyah">

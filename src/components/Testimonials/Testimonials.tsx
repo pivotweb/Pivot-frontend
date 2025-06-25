@@ -35,7 +35,7 @@ export const Testimonials = () => {
 
                 <article className="w-1/3">
                     <div className="h-[300px] overflow-hidden">
-                        <img src="images/testimonial3.jpg" alt="" className="w-full h-full object-cover rounded-2xl"/>
+                        <img src="images/testimonial3.jpg" alt="" className="w-full h-full object-top object-cover rounded-2xl"/>
                     </div>
                     <p className="my-5 px-5">
                         <span className="text-xl">"</span>

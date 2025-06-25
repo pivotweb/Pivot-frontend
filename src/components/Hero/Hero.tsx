@@ -7,7 +7,7 @@ export const Hero = () => {
             <main className="hero-bg text-white">
                 <h1 className="text-3xl md:text-6xl font-medium ">The Pivot Challenge</h1>
                 <p className="text-lg my-5 md:my-0 md:mt-3 font-medium">Empowering MSMEs to Go Digital, Grow Stronger, and Get Seen.</p>
-                <Button title="Apply Now for 2025" style={"bg-[#F06621] hover:bg-[#F6A37A] md:mt-5 md:px-11 md:py-4 px-7 py-3"}/>
+                <Button title="Apply Now for 2025" style={"bg-[#F06621] hover:bg-[#F6A37A] md:mt-5 md:px-11 md:py-4 px-7 py-3"} link="https://docs.google.com/forms/d/e/1FAIpQLSdHQ-J0ih1bjnUUzYpSUiodp5dwA8l4Edr7QInKTxdY_QuJhA/viewform?usp=header"/>
             </main>
             <main className="py:5 md:py-15 flex flex-col md:flex-row text-center md:text-start">
                 <article className="md:w-3/5 mb-5">

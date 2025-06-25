@@ -4,10 +4,13 @@ import { Hero } from "../components/Hero/Hero"
 import { Hustlers } from "../components/hustlers/Hustlers"
 import { Header } from "../components/Navigation/Header"
 import { Numbers } from "../components/Numbers/Numbers"
+import Footer from '../components/Footer/Footer'
+import Support from "../components/Support/Support"
 import { Pivot24 } from "../components/Pivot24/Pivot24"
 import { RolePlay } from "../components/RoleToPlay/RolePlay"
 import { Stories } from "../components/Stories/Stories"
 import { Testimonials } from "../components/Testimonials/Testimonials"
+import ContactForm from "../components/contacts/ContactForm"
 
 export const LandingPage = () => {
     return (
@@ -42,8 +45,15 @@ export const LandingPage = () => {
                 <Testimonials />
 
                 {/* <Contact Us /> */}
+                <ContactForm />
+
+                {/* <Join the Movement /> */}
+                {/* <Footer /> */}
                 {/* <Your Support Can Power 3,000 Businesses /> */}
-                {/* <Footer/> */}
+                <Support />
+
+                {/* Footer */}
+                <Footer/>
             </ContainerWrapper>
         </>
     )

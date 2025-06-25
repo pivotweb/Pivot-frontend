@@ -1,0 +1,141 @@
+.Support-container {
+    padding: 32px 16px;
+    background-color: #f8f9fa;
+    font-family:  'Montserrat', sans-serif;
+    margin: 30px 30px;
+}
+
+.support-context {
+     text-align: center;
+    align-items: center;
+}
+
+.support-heading {
+    font-size: 26px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+.Support-text {
+    margin: 27px;
+}
+
+.support-context2 {
+    max-width: 1800px;
+    margin: 0 auto;
+    /* padding: 40px; */
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+/* Left side container for the two text sections */
+.support-content-left {
+    flex: 2;
+}
+
+.support-left-block {
+    flex: 1;
+    min-width: 250px;
+    max-width: 600px;
+}
+
+.support-heading2 {
+    font-size: 22px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.support-text2 {
+    margin: 30px;
+}
+
+/* Right side: buttons */
+.support-aside-container {
+    flex: 1;
+    max-width: 1000px;
+    margin-top: 50px;
+}
+
+.support-text2 li {
+    list-style: disc;
+    font-size: 16px;
+}
+
+.support-context3-text, .support-context2-text {
+    margin:  25px 0;
+}
+
+.De-text {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+.aside-context {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+.myBtn1 {
+    padding: 18px 50px;
+    background-color: #F06621;
+    color: white;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.myBtn1:hover {
+    background-color: #e89972;
+}
+
+.myBtn1:active {
+    background-color: #ed814b;
+}
+
+.myBtn2 {
+    padding: 18px 50px;
+    background-color: #000;
+    color: white;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.myBtn2:hover {
+    background-color: #1f1616;
+}
+
+.myBtn2:hover {
+    background-color: #211414;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .support-context2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .support-left-block, .support-aside-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .aside-context {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

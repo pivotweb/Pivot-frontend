@@ -18,7 +18,7 @@ export const Hero = () => {
                     <p className="text-md md:text-lg w-[95%]">From Aba to Awka, Nsukka to Nnewi, we’re meeting MSMEs where they are and taking them where they need to be—online, equipped, and unstoppable.</p>
                     <div className="flex flex-col md:flex-row justify-between md:w-[95%] w-full">
                         <Button title="Apply Now for 2025" style={"bg-[#F06621] hover:bg-[#F6A37A] px-11 py-4 my-7 md:my-0"} link="https://docs.google.com/forms/d/e/1FAIpQLSdHQ-J0ih1bjnUUzYpSUiodp5dwA8l4Edr7QInKTxdY_QuJhA/viewform?usp=header"/>
-                        <Button title="Partner With us" style={"bg-black hover:bg-[#4B3D34] px-11 py-4"}/>
+                        <Button title="Partner With us" style={"bg-black hover:bg-[#4B3D34] px-11 py-4"} link="https://docs.google.com/forms/d/e/1FAIpQLSc51CdFXa605Vsxpu-CuqaJ-OKsPfMoO9jh16QafdH7r6JiNQ/viewform?usp=header"/>
                     </div>
                 </article>
             </main>

@@ -4,17 +4,17 @@ import "./Hustlers.css"
 export const Hustlers = () => {
   return (
     <section className="py-15">
-      <main className="gap-5 flex flex-row justify-between">
+      <main className="gap-5 flex flex-col md:flex-row justify-between">
         <div className="hustler-image">
             
         </div>
         {/* <img src="images/ella.jpg" alt="Local Hustlers" className="w-[48%]" /> */}
 
-        <article className="w-[48%]">
-          <h1 className="text-4xl font-bold">
-            Built for Local Hustlers. Designed for Global Possibilities.
+        <article className="w-full md:w-[48%] md:text-start">
+          <h1 className="text-2xl mt-3 md:mt-0 md:text-4xl font-bold text-center">
+            Built for Local Hustlers. <br /> Designed for Global Possibilities.
           </h1>
-          <p className="mt-5 text-lg">
+          <p className="mt-5 text-lg text-center">
             The Pivot Challenge is not your typical training program. It's a
             digital transformation movement tailored to Nigeria’s most resilient
             entrepreneurs, the traders, the manufacturers, the dreamers.
@@ -28,23 +28,23 @@ export const Hustlers = () => {
           </p>
 
           <article className="mt-8 ">
-            <h4 className="text-3xl font-medium">What Makes Us Different:</h4>
+            <h4 className="text-2xl md:text-3xl font-medium">What Makes Us Different:</h4>
             <ul className="custom-list">
-              <span className="text-xl mt-6 flex flex-row justify-start items-start"> 
+              <span className="text-ld md:text-xl mt-6 flex flex-row justify-start items-start"> 
                 <div><SettingsIcon width={36} height={36} className="mr-3"/></div>
                 <p>
                     <span className="font-bold">Practical, not abstract. </span>
                     Every lesson is built around what you do every day.
                 </p>
               </span>
-              <span className="text-xl mt-3 flex flex-row justify-start items-start">
+              <span className="text-ld md:text-xl mt-3 flex flex-row justify-start items-start">
                 <div><SettingsIcon width={36} height={36} className="mr-3"/></div>
                 <p>
                     <span className="font-bold">Community-driven. </span> Your
                     peers, mentors, and networks are part of the journey.
                 </p>
               </span>
-              <span className="text-xl mt-3 flex flex-row justify-start items-start">
+              <span className="text-ld md:text-xl mt-3 flex flex-row justify-start items-start">
                 <div>
                     <SettingsIcon width={36} height={36} className="mr-3"/></div>
                 <p>
@@ -52,7 +52,7 @@ export const Hustlers = () => {
                     you real apps, real systems, real results.
                 </p>
               </span>
-              <span className="text-xl mt-3 flex flex-row justify-start items-start">
+              <span className="text-ld md:text-xl mt-3 flex flex-row justify-start items-start">
                 <div>
                         <SettingsIcon width={36} height={36} className="mr-3"/></div>
                 <p>

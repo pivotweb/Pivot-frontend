@@ -1,7 +1,7 @@
 
 .hero-bg {
     width: 100%;
-    min-height: 60vh;
+    min-height: 65vh;
     display: flex;
     flex-direction: column;
     padding: 100px 0;
@@ -13,24 +13,38 @@
     margin-bottom: 20px;
     position: relative;
     border-radius: 20px;
-    /* background: url('./assets/d0741e7f8e8c89079a86f56c4f156416.jpeg') center center no-repeat; */
-    /* background: linear-gradient(
-        180deg,
-        #f0662181 30.98%,
-        rgba(255, 255, 255, 0.622) 95.47%
-        ),
-        url("images/hero.png") center center
-        no-repeat; */
-        background:
+    background:
         linear-gradient(
             180deg,
             rgba(240, 102, 33, 1) 0%,       /* Strong orange at top */
             rgba(240, 102, 33, 0.9) 10%,      /* Still strong */
             rgba(240, 102, 33, 0.7) 25%,      /* Fading starts */
             rgba(240, 102, 33, 0.5) 35%,      /* Almost gone */
-            rgba(240, 102, 33, 0.036) 50%      /* Fully transparent to white */
+            rgba(240, 102, 33, 0.3) 50%,      /* Fully transparent to white */
+            rgba(240, 102, 33, 0.1) 75% 
         ),
         url("images/hero.png") center center no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+    .hero-bg {
+        padding: 50px 20px;
+        min-height: 40vh;
+        background:
+        linear-gradient(
+            180deg,
+            rgba(240, 102, 33, 1) 0%,       /* Strong orange at top */
+            rgba(240, 102, 33, 0.9) 10%,      /* Still strong */
+            rgba(240, 102, 33, 0.8) 25%,      /* Fading starts */
+            rgba(240, 102, 33, 0.7) 35%,      /* Almost gone */
+            rgba(240, 102, 33, 0.6) 50%,      /* Fully transparent to white */
+            rgba(240, 102, 33, 0.4) 65%,      /* Fully transparent to white */
+            rgba(240, 102, 33, 0.3) 75%,      /* Fully transparent to white */
+            rgba(240, 102, 33, 0.2) 75%,     /* Fully transparent to white */
+            rgba(240, 102, 33, 0.001) 85%      /* Fully transparent to white */
+        ),
+        url("images/hero.png") center center no-repeat;
+    }
 }

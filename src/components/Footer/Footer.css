@@ -1,12 +1,15 @@
 .footer-container {
-  padding: 48px 32px;
+  /* padding: 48px 32px; */
   font-family: 'Montserrat', sans-serif;
   background-color: #fff;
+  margin: 0;
+  width: 1279px;
+  /* padding: 0; */
 }
 
 .footer-context {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1279px;
+  /* margin: 0 auto; */
 }
 
 .sctt1 {
@@ -85,7 +88,7 @@
 }
 
 .Subscribe-button:hover {
-  background-color: #e15b18;
+  background-color: #e89972;
 }
 
 .Subscribe-text {
@@ -158,7 +161,6 @@
   border-radius: 6px;
   text-decoration: none;
   color: white;
-  margin-bottom: 4px;
   transition: opacity 0.2s;
 }
 
@@ -168,29 +170,25 @@
 
 /* Social Media Colors */
 .footer-sct2 a[aria-label="Facebook"] {
-  color: #1877f2;
+  color: #000;
 }
 
 .footer-sct2 a[aria-label="Instagram"] {
-  color: #ec4899;
+  color: #000;
 }
 
 .footer-sct2 a[aria-label="X (Twitter)"] {
-  color: #374151;
+  color: #000;
 }
 
 .footer-sct2 a[aria-label="YouTube"] {
-  color: #e61c1c;
-}
-
-.x {
-    font-size: bold;
+  color: #000;
 }
 
 .Bottom-footer-context {
     display: flex;
     justify-content: space-between;
-    margin: 15px 16px;
+    margin: 15px 0;
 }
 
 .power-text {
@@ -216,11 +214,71 @@
 .wrap a:hover {
     color: #000000;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Large Desktop (1440px and up) */
+@media (min-width: 1440px) {
   .footer-container {
-    padding: 32px 16px;
+    padding: 64px 48px;
+  }
+  
+  .sctt1 {
+    padding: 48px;
+  }
+  
+  .footing {
+    gap: 64px;
+  }
+  
+  .Email-div {
+    width: 50%;
+  }
+}
+
+/* Desktop (1200px to 1439px) */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .Email-div {
+    width: 55%;
+  }
+  
+  .footing {
+    gap: 56px;
+  }
+}
+
+/* Laptop (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .footer-container {
+    padding: 40px 24px;
+  }
+  
+  .sctt1 {
+    padding: 24px;
+  }
+  
+  .footing {
+    gap: 40px;
+  }
+  
+  .Email-div {
+    width: 65%;
+  }
+  
+  .Deyah {
+    margin-left: 32px;
+  }
+  
+  .Social-section {
+    gap: 32px;
+  }
+}
+
+/* Tablet (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .footer-container {
+    padding: 36px 20px;
+  }
+  
+  .sctt1 {
+    padding: 20px;
   }
   
   .footing {
@@ -228,26 +286,231 @@
     gap: 32px;
   }
   
-  .Social-section {
-    flex-direction: column;
-    gap: 24px;
+  .Newsletter {
+    gap: 20px;
   }
   
   .Email-div {
-    flex-direction: column;
+    width: 80%;
   }
   
-  .Subscribe-button {
-    width: 100%;
+  .Deyah {
+    margin-left: 24px;
+  }
+  
+  .Social-section {
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 0;
+  }
+  
+  .Newsletter-header img {
+    max-height: 300px;
   }
 }
 
-@media (max-width: 480px) {
+/* Mobile Large (576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .footer-container {
+    padding: 32px 16px;
+  }
+  
   .sctt1 {
     padding: 16px;
   }
   
+  .footing {
+    flex-direction: column;
+    gap: 28px;
+  }
+  
+  .Email-div {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .Subscribe-button {
+    width: 100%;
+    padding: 12px 24px;
+  }
+  
+  .Deyah {
+    margin-left: 16px;
+  }
+  
   .Social-section {
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 0;
+  }
+  
+  .Newsletter-header img {
+    max-height: 250px;
+  }
+  
+  .Bottom-footer-context {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  
+  .wrap {
+    justify-content: center;
+  }
+}
+
+/* Mobile Small (up to 575px) */
+@media (max-width: 575px) {
+  .footer-container {
+    padding: 24px 12px;
+  }
+  
+  .sctt1 {
+    padding: 12px;
+  }
+  
+  .footing {
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .Newsletter {
     gap: 16px;
+  }
+  
+  .Email-div {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .Input-email {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .Subscribe-button {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  
+  .Deyah {
+    margin-left: 8px;
+  }
+  
+  .Deyah-heading {
+    font-size: 14px;
+  }
+  
+  .Social-section {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 0;
+  }
+  
+  .Quick-text,
+  .follow-heading {
+    font-size: 14px;
+  }
+  
+  .De-links {
+    font-size: 14px;
+  }
+  
+  .Newsletter-header img {
+    max-height: 200px;
+  }
+  
+  .Bottom-footer-context {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    margin: 12px 8px;
+  }
+  
+  .power-text,
+  .wrap {
+    font-size: 12px;
+  }
+  
+  .wrap {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-sct2 a {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Mobile Extra Small (up to 375px) */
+@media (max-width: 375px) {
+  .footer-container {
+    padding: 20px 8px;
+  }
+  
+  .sctt1 {
+    padding: 8px;
+  }
+  
+  .Newsletter-header img {
+    max-height: 180px;
+  }
+  
+  .Deyah-heading {
+    font-size: 13px;
+  }
+  
+  .Subscribe-text {
+    font-size: 12px;
+  }
+  
+  .Quick-text,
+  .follow-heading {
+    font-size: 13px;
+  }
+  
+  .De-links {
+    font-size: 13px;
+  }
+  
+  .footer-sct2 a {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .Bottom-footer-context {
+    margin: 8px 4px;
+  }
+  
+  .power-text,
+  .wrap {
+    font-size: 11px;
+  }
+}
+
+/* Ultra-wide screens (1920px and up) */
+@media (min-width: 1920px) {
+  .footer-container {
+    padding: 80px 64px;
+  }
+  
+  .sctt1 {
+    padding: 64px;
+  }
+  
+  .footing {
+    gap: 80px;
+  }
+  
+  .Email-div {
+    width: 45%;
+  }
+  
+  .Newsletter-header img {
+    max-height: 500px;
   }
 }

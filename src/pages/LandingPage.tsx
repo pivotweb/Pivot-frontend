@@ -1,5 +1,8 @@
 import { ContainerWrapper } from "../components/Global/Global"
+import { Hero } from "../components/Hero/Hero"
+import { Hustlers } from "../components/hustlers/Hustlers"
 import { Header } from "../components/Navigation/Header"
+import { Numbers } from "../components/Numbers/Numbers"
 
 export const LandingPage = () => {
     return (
@@ -8,9 +11,16 @@ export const LandingPage = () => {
                 
                 {/* <Navigation /> */}
                 <Header />
+
                 {/* <Hero /> */}
+                <Hero />
+
                 {/* <Numbers /> */}
+                <Numbers />
+
                 {/* <Built for Local Hustlers. Designed for Global Possibilities. /> */}
+                <Hustlers />
+
                 {/* <The 2025 Edition:  /> */}
                 {/* <2024 Pivot Challenge Recap /> */}
                 {/* <You Have a Role to Play /> */}

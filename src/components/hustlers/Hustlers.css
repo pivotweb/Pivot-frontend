@@ -9,7 +9,7 @@
 .hustler-image {
     width: 45%;
     min-height: 70vh;
-    background-image: url('images/hustle.jpg');
+    background-image: url('/images/hustle.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 10px;

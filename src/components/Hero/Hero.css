@@ -23,7 +23,7 @@
             rgba(240, 102, 33, 0.3) 50%,      /* Fully transparent to white */
             rgba(240, 102, 33, 0.1) 75% 
         ),
-        url("images/hero.png") center center no-repeat;
+        url("/images/hero.png") center center no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -45,6 +45,6 @@
             rgba(240, 102, 33, 0.2) 75%,     /* Fully transparent to white */
             rgba(240, 102, 33, 0.001) 85%      /* Fully transparent to white */
         ),
-        url("images/hero.png") center center no-repeat;
+        url("/images/hero.png") center center no-repeat;
     }
 }

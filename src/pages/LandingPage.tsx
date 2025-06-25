@@ -3,6 +3,8 @@ import { Hero } from "../components/Hero/Hero"
 import { Hustlers } from "../components/hustlers/Hustlers"
 import { Header } from "../components/Navigation/Header"
 import { Numbers } from "../components/Numbers/Numbers"
+import Footer from '../components/Footer/Footer'
+import Support from "../components/Support/Support"
 
 export const LandingPage = () => {
     return (
@@ -28,7 +30,10 @@ export const LandingPage = () => {
                 {/* <Testimonials /> */}
                 {/* <Contact Us /> */}
                 {/* <Your Support Can Power 3,000 Businesses /> */}
-                {/* <Footer/> */}
+                <Support />
+
+                {/* Footer */}
+                <Footer/>
             </ContainerWrapper>
         </>
     )

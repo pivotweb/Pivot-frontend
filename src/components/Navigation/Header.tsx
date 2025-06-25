@@ -1,13 +1,7 @@
 // components/Header.tsx
 import React from 'react'
-import clsx from 'clsx' // optional: remove clsx if you don’t use it
+import clsx from 'clsx' 
 
-/**
- * Maps each nav label to a multiplier of the viewport height.
- * 0   → top of the page
- * 0.2 → 20 % of current screen height
- * 0.4 → 40 %, 0.6 → 60 %, etc.
- */
 const SCROLL_POS: Record<string, number> = {
     Home: 0,
     About: 1.33,
@@ -15,7 +9,7 @@ const SCROLL_POS: Record<string, number> = {
     '2024 Recap': 4.85,
     'Get Involved': 6.75,
     Gallery: 7.43,
-    Contact: 10.5, // ► tweak or remove if your page isn’t that tall
+    Contact: 10.5, 
 }
 
 export const Header: React.FC = () => {

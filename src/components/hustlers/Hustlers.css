@@ -1,0 +1,16 @@
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+.custom-list li::marker {
+    content: url('image/logo.png');
+}
+
+.hustler-image {
+    width: 45%;
+    min-height: 70vh;
+    background-image: url('images/hustle.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}

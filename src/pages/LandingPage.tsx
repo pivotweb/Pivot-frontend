@@ -4,6 +4,7 @@ import { Hero } from "../components/Hero/Hero"
 import { Hustlers } from "../components/hustlers/Hustlers"
 import { Header } from "../components/Navigation/Header"
 import { Numbers } from "../components/Numbers/Numbers"
+import ContactForm from "../components/contacts/ContactForm"
 
 export const LandingPage = () => {
     return (
@@ -30,6 +31,10 @@ export const LandingPage = () => {
                 {/* <Stories in Motion /> */}
                 {/* <Testimonials /> */}
                 {/* <Contact Us /> */}
+                <ContactForm />
+
+                {/* <Join the Movement /> */}
+                {/* <Footer /> */}
                 {/* <Your Support Can Power 3,000 Businesses /> */}
                 {/* <Footer/> */}
             </ContainerWrapper>

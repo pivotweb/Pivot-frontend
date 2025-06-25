@@ -26,12 +26,12 @@ const ContactSection: React.FC = () => {
           }
 
           return (
-                    <section className="w-full max-w-7xl mx-auto rounded-xl bg-white p-6 md:p-10 shadow-lg">
+                    <section className="w-full max-w-7xl mx-auto rounded-xl bg-white py-6 md:py-10 ">
                               <div className="flex flex-col md:flex-row gap-10">
                                         {/* Left – contact details */}
                                         <div className="md:w-5/12 w-full flex flex-col gap-6">
                                                   <div>
-                                                            <h2 className="text-2xl font-bold text-gray-900">Contact</h2>
+                                                            <h2 className="text-3xl font-bold ">Contact</h2>
                                                             <p className="mt-3 text-sm text-gray-700 max-w-[44ch]">
                                                                       Wanna Say Hello or Ask a Question- Let’s Talk!
                                                             </p>
@@ -58,6 +58,7 @@ const ContactSection: React.FC = () => {
                                                                       id="name"
                                                                       label="Name"
                                                                       name="name"
+                                                                      placeholder='Enter name '
                                                                       value={formData.name}
                                                                       onChange={handleChange}
                                                                       required
@@ -67,6 +68,7 @@ const ContactSection: React.FC = () => {
                                                                       label="Email"
                                                                       name="email"
                                                                       type="email"
+                                                                      placeholder='Enter email address'
                                                                       value={formData.email}
                                                                       onChange={handleChange}
                                                                       required
@@ -75,6 +77,7 @@ const ContactSection: React.FC = () => {
                                                                       id="message"
                                                                       label="Message"
                                                                       name="message"
+                                                                      placeholder='Enter your message here'
                                                                       value={formData.message}
                                                                       onChange={handleChange}
                                                                       required
@@ -83,7 +86,7 @@ const ContactSection: React.FC = () => {
                                                             <Button
                                                                       title="Submit"
                                                                       type="submit"
-                                                                      style="bg-orange-500 hover:bg-orange-600 px-10 py-3 w-max self-start"
+                                                                      style="bg-[#F06621] hover:bg-[#F6A37A] px-10 py-3 w-max self-start"
                                                             />
                                                   </form>
                                         </div>

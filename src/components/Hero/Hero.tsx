@@ -16,8 +16,8 @@ export const Hero = () => {
                 <article className="w-2/5 flex flex-col justify-between items-end">
                     <p className="text-lg w-[95%]">From Aba to Awka, Nsukka to Nnewi, we’re meeting MSMEs where they are and taking them where they need to be—online, equipped, and unstoppable.</p>
                     <div className="flex flex-row justify-between w-[95%]">
-                        <Button title="Apply Now for 2025" style={"bg-[#F06621] hover:bg-black px-11 py-4"}/>
-                        <Button title="Partner With us" style={"bg-black hover:bg-[#F06621] px-11 py-4"}/>
+                        <Button title="Apply Now for 2025" style={"bg-[#F06621] hover:bg-[#F6A37A] px-11 py-4"}/>
+                        <Button title="Partner With us" style={"bg-black hover:bg-[#4B3D34] px-11 py-4"}/>
                     </div>
                 </article>
             </main>

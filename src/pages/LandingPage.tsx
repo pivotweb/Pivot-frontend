@@ -4,6 +4,10 @@ import { Hero } from "../components/Hero/Hero"
 import { Hustlers } from "../components/hustlers/Hustlers"
 import { Header } from "../components/Navigation/Header"
 import { Numbers } from "../components/Numbers/Numbers"
+import { Pivot24 } from "../components/Pivot24/Pivot24"
+import { RolePlay } from "../components/RoleToPlay/RolePlay"
+import { Stories } from "../components/Stories/Stories"
+import { Testimonials } from "../components/Testimonials/Testimonials"
 
 export const LandingPage = () => {
     return (
@@ -26,9 +30,17 @@ export const LandingPage = () => {
                 <Edition25 />
 
                 {/* <2024 Pivot Challenge Recap /> */}
+                <Pivot24 />
+
                 {/* <You Have a Role to Play /> */}
+                <RolePlay />
+
                 {/* <Stories in Motion /> */}
+                <Stories />
+
                 {/* <Testimonials /> */}
+                <Testimonials />
+
                 {/* <Contact Us /> */}
                 {/* <Your Support Can Power 3,000 Businesses /> */}
                 {/* <Footer/> */}

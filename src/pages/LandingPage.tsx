@@ -7,6 +7,7 @@ import { Numbers } from "../components/Numbers/Numbers"
 import { Pivot24 } from "../components/Pivot24/Pivot24"
 import { RolePlay } from "../components/RoleToPlay/RolePlay"
 import { Stories } from "../components/Stories/Stories"
+import { Testimonials } from "../components/Testimonials/Testimonials"
 
 export const LandingPage = () => {
     return (
@@ -38,7 +39,8 @@ export const LandingPage = () => {
                 <Stories />
 
                 {/* <Testimonials /> */}
-                
+                <Testimonials />
+
                 {/* <Contact Us /> */}
                 {/* <Your Support Can Power 3,000 Businesses /> */}
                 {/* <Footer/> */}

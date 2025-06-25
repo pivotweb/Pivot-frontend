@@ -1,3 +1,4 @@
+import { Edition25 } from "../components/Edition25/Edition25"
 import { ContainerWrapper } from "../components/Global/Global"
 import { Hero } from "../components/Hero/Hero"
 import { Hustlers } from "../components/hustlers/Hustlers"
@@ -22,6 +23,8 @@ export const LandingPage = () => {
                 <Hustlers />
 
                 {/* <The 2025 Edition:  /> */}
+                <Edition25 />
+
                 {/* <2024 Pivot Challenge Recap /> */}
                 {/* <You Have a Role to Play /> */}
                 {/* <Stories in Motion /> */}

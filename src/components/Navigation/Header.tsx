@@ -1,6 +1,6 @@
 export const Header = () => {
     return (
-        <header className="bg-white flex flex-row items-center justify-between py-4">
+        <header className="sticky top-0 z-50 bg-white flex flex-row items-center justify-between py-4 ">
             <img src="images/logo2.jpeg" alt="The Pivot" className="w-40 "/>
             <nav className="flex space-x-6">
                 <a href="#" className="text-black text-lg hover:text-[#F06621]">Home</a>

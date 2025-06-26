@@ -8,7 +8,7 @@ type ButtonProps = {
 
 const Button: React.FC<ButtonProps> = ({ title, style = '', ...rest }) => {
   const baseClasses =
-    'cursor-pointer rounded-lg font-semibold shadow-md transition-colors duration-200 px-11 py-4 text-center text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50'
+    'cursor-pointer rounded-lg font-semibold shadow-md transition-colors duration-200 text-center text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50'
 
   return (
     <button className={`${baseClasses} ${style}`} {...rest}>

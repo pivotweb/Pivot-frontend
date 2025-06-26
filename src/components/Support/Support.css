@@ -127,6 +127,7 @@
     .support-context2 {
         flex-direction: column;
         align-items: center;
+        gap: 10px;
     }
 
     .support-left-block, .support-aside-container {
@@ -137,5 +138,17 @@
     .aside-context {
         flex-direction: column;
         align-items: stretch;
+        gap: 15px;
+    }
+
+    .support-aside-container {
+        margin-top: 0px;
+    }
+    .support-btn {
+        padding: 40px;
+        border-radius: 15px;
+    }
+    .support-context3-text, .support-context2-text {
+        margin:  15px 0 0 0 ;
     }
 }

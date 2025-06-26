@@ -11,12 +11,12 @@ export const Edition25 = () => {
                     </p>
                 </article>
                 <div className="mt-15 md:w-[98%] m-auto flex md:flex-row flex-col-reverse justify-between items-center">
-                    <article className="space-y-5 mt-5 md:mt-0 md:w-[40%]">
+                    <article className="space-y-5 mt-10 md:mt-0 md:w-[40%]">
                         <h1 className="font-bold text-3xl">What You’ll Get:</h1>
-                        <p className="text-xl">Tools to run your business online.</p>
-                        <p className="text-xl">Visibility and a chance to pitch your business at The Pivot Conference.</p>
-                        <p className="text-xl">Access to subsidized internet we know the struggle</p>
-                        <p className="text-xl">Mentorship from people who’ve walked the talk</p>
+                        <p className="text-lg">Tools to run your business online.</p>
+                        <p className="text-lg">Visibility and a chance to pitch your business at The Pivot Conference.</p>
+                        <p className="text-lg">Access to subsidized internet we know the struggle</p>
+                        <p className="text-lg">Mentorship from people who’ve walked the talk</p>
                     </article>
                     <div className="md:w-[50%] h-[320px] overflow-hidden">
                         <img src="images/edition25.png" alt="" className="w-full h-full object-cover rounded-2xl"/>
@@ -49,31 +49,31 @@ export const Edition25 = () => {
                     </div>
 
                     <article className="w-4/5 md:w-full gap-10 flex flex-col md:flex-row">
-                        <div className="border border-[#F06621] text-center md:px-10 md:py-5 px-3 py-5 md:w-1/4 md:mt-10 rounded-lg">
+                        <div className="border border-[#F06621] text-center md:px-10 md:py-5 px-3 py-10 md:w-1/4 md:mt-10 rounded-lg">
                             <h3 className="text-xl font-bold">Weeks 1-7</h3>
                             <p className="text-center mt-3">Live virtual classes, downloadable toolkits, expert feedback</p>
                         </div>
 
-                        <div className="border border-[#F06621] text-center md:px-10 md:py-5 px-3 py-5 md:w-1/4 md:mt-10 rounded-lg">
+                        <div className="border border-[#F06621] text-center md:px-10 md:py-5 px-3 py-10 md:w-1/4 md:mt-10 rounded-lg">
                             <h3 className="text-xl font-bold">Weeks 8</h3>
                             <p className="text-center mt-3">Top 10 businesses go residential for an on-ground digital transformation experience</p>
                         </div>
 
-                        <div className="border border-[#F06621] text-center md:px-10 md:py-5 px-3 py-5 md:w-1/4 md:mt-10 rounded-lg">
+                        <div className="border border-[#F06621] text-center md:px-10 md:py-5 px-3 py-10 md:w-1/4 md:mt-10 rounded-lg">
                             <h3 className="text-xl font-bold">October 1, 2025</h3>
                             <p className="text-center mt-3">The Pivot Conference – Finalists pitch live in Awka</p>
                         </div>
 
-                        <div className="border border-[#F06621] text-center md:px-10 md:py-5 px-3 py-5 md:w-1/4 md:mt-10 rounded-lg">
+                        <div className="border border-[#F06621] text-center md:px-10 md:py-5 px-3 py-10 md:w-1/4 md:mt-10 rounded-lg">
                             <h3 className="text-xl font-bold">Post-bootcamp</h3>
                             <p className="text-center mt-3">Free digital tools, mentorship, broadband access & funding exposure.</p>
                         </div>
                     </article>
                 </div>
 
-                <nav className="flex md:flex-row flex-col my-15 justify-center items-center gap-5 md:gap-10">
-                    <Button title="Apply Now" style={"bg-[#F06621] hover:bg-[#F6A37A] px-35 py-4"} link="https://docs.google.com/forms/d/e/1FAIpQLSc51CdFXa605Vsxpu-CuqaJ-OKsPfMoO9jh16QafdH7r6JiNQ/viewform?usp=header"/>
-                    <Button title="Download Full Program Brochure" style={"bg-black hover:bg-[#4B3D34] px-11 py-4"}/>
+                <nav className="flex w-full md:flex-row flex-col my-15 justify-center items-center gap-5 md:gap-10">
+                    <Button title="Apply Now" style={"bg-[#F06621] hover:bg-[#F6A37A] w-full md:w-1/2 py-4"} link="https://docs.google.com/forms/d/e/1FAIpQLSc51CdFXa605Vsxpu-CuqaJ-OKsPfMoO9jh16QafdH7r6JiNQ/viewform?usp=header"/>
+                    <Button title="Download Full Program Brochure" style={"bg-black hover:bg-[#4B3D34] w-full md:w-1/2 py-4"}/>
                 </nav>
             </main>
         </section>

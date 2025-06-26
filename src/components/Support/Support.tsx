@@ -17,10 +17,10 @@ const Support = () => {
 
         <div className='support-context2'>
         <div className='support-content-left'>
-            <div className='support-context2-text'>
+            <div className='support-context2-text text-center md:text-start'>
                 <h1 className='support-heading2'>How You Can Help</h1>
-                <div className='support-text2'>
-                    <ul>
+                <div className='support-text2 '>
+                    <ul className='text-center flex flex-col items-center md:text-left md:block md:items-start'>
                         <li>Fund tech kits and data bundles</li>
                         <li>Sponsor mentorship cycles</li>
                         <li>Provide venues, tools and software</li>
@@ -29,17 +29,23 @@ const Support = () => {
                 </div>
             </div>
 
-            <div className='support-context3-text'>
+            <div className='support-context3-text text-center md:text-start'>
                 <h1 className='support-heading2'>Why it Matters</h1>
-                <p className='De-text'>MSMEs make up 96% of Nigeria's businesses, but <br /> digital exclusion is holding many of them back. With <br /> you, we can change that story—starting from the <br /> ground up.</p>
+                <div className="De-text">
+                    <p className=" md:mb-2">MSMEs make up 96% of Nigeria's businesses,</p>
+                    <p className=" md:mb-2">digital exclusion is holding many of them back.</p>
+                    <p className=" md:mb-2">With you, we can change that story—</p>
+                     <p>starting from the ground up.</p>
+                </div>
+                {/* <p className='De-text'>MSMEs make up 96% of Nigeria's businesses, but <br /> digital exclusion is holding many of them back. With <br /> you, we can change that story—starting from the <br /> ground up.</p> */}
             </div>
         </div>
 
         <aside className='support-aside-container'>
             <div className='aside-context'>
-                <button className='myBtn1'>Become a Strategic Partner</button>
-                <button className='myBtn2'>Schedule a Call With Our Team</button>
-                <button className='myBtn2'>Download Our Partner Deck</button>
+                <button className='myBtn1 support-btn'>Become a Strategic Partner</button>
+                <button className='myBtn2 support-btn'>Schedule a Call With Our Team</button>
+                <button className='myBtn2 support-btn'>Download Our Partner Deck</button>
             </div>
         </aside>
     </div>

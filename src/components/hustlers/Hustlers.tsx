@@ -11,7 +11,7 @@ export const Hustlers = () => {
         {/* <img src="images/ella.jpg" alt="Local Hustlers" className="w-[48%]" /> */}
 
         <article className="w-full md:w-[48%] md:text-start">
-          <h1 className="text-2xl mt-3 md:mt-0 md:text-4xl font-bold text-center">
+          <h1 className="text-xl mt-3 md:mt-0 md:text-4xl font-bold text-center">
             Built for Local Hustlers. <br /> Designed for Global Possibilities.
           </h1>
           <p className="mt-5 text-lg text-center">

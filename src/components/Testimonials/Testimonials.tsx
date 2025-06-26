@@ -2,8 +2,8 @@ export const Testimonials = () => {
     return (
         <section className="my-25 text-center">
             <h1 className="text-3xl font-bold">Testimonials</h1>
-            <main className="my-15 gap-10 flex items-center justify-between"> 
-                <article className="w-1/3">
+            <main className="my-15 gap-10 flex flex-col md:flex-row items-center justify-between"> 
+                <article className="md:w-1/3">
                     <div className=" h-[300px] overflow-hidden">
                         <img src="images/testimonial1.jpg" alt="" className="w-full h-full object-cover rounded-2xl"/>
                     </div>
@@ -15,7 +15,7 @@ export const Testimonials = () => {
                     <h3 className="text-xl font-medium">Entrepreneur</h3>
                 </article>
 
-                <article className="w-1/3">
+                <article className="md:w-1/3">
                     <div className=" h-[300px]  overflow-hidden">
                     <video
                         src="images/testimonial2.mp4"
@@ -33,7 +33,7 @@ export const Testimonials = () => {
                     <h3 className="text-xl font-medium">Mentor</h3>
                 </article>
 
-                <article className="w-1/3">
+                <article className="md:w-1/3">
                     <div className="h-[300px] overflow-hidden">
                         <img src="images/testimonial3.jpg" alt="" className="w-full h-full object-top object-cover rounded-2xl"/>
                     </div>

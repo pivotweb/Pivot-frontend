@@ -29,20 +29,20 @@ const ContactSection: React.FC = () => {
                     <section className="w-full max-w-7xl mx-auto rounded-xl bg-white py-6 md:py-10 ">
                               <div className="flex flex-col md:flex-row gap-10">
                                         {/* Left – contact details */}
-                                        <div className="md:w-5/12 w-full flex flex-col gap-6">
-                                                  <div>
+                                        <div className="md:w-5/12 w-full flex flex-col gap-6 md:text-start text-center">
+                                                  <div >
                                                             <h2 className="text-3xl font-bold ">Contact</h2>
                                                             <p className="mt-3 text-sm text-gray-700 max-w-[44ch]">
                                                                       Wanna Say Hello or Ask a Question- Let’s Talk!
                                                             </p>
                                                   </div>
 
-                                                  <div className="flex flex-col gap-4">
+                                                  <div className="flex flex-col gap-4 md:items-start items-center">
                                                             <InfoItem icon={<FiMail />} text="hello@thepivot.ng" />
                                                             <InfoItem icon={<FiPhone />} text="+234 816 408 2120" />
                                                   </div>
 
-                                                  <div className="flex flex-col gap-2">
+                                                  <div className="flex flex-col gap-2 md:items-start items-center">
                                                             <p className="text-sm font-semibold text-gray-800">Follow us on social:</p>
                                                             <SocialIcons />
                                                   </div>

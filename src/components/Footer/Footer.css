@@ -1,14 +1,14 @@
 .footer-container {
-  /* padding: 48px 32px; */
+  padding: 48px 32px;
   font-family: 'Montserrat', sans-serif;
-  background-color: #fff;
   margin: 0;
-  width: 1279px;
+  /* max-width: 1279px;  */
+  width: 100%; /* Added to ensure full width up to max-width */
   /* padding: 0; */
 }
 
 .footer-context {
-  max-width: 1279px;
+  max-width: 100%; /* Fixed typo: was "100" now "100%" */
   /* margin: 0 auto; */
 }
 
@@ -30,6 +30,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  min-width: 0; /* Added to prevent flex item from overflowing */
 }
 
 .Newsletter-header img{
@@ -40,6 +41,7 @@
 .Newsletter-header img {
   max-height: 400px;
   width: auto;
+  max-width: 100%; /* Added to prevent image overflow */
 }
 
 .Deyah {
@@ -59,6 +61,7 @@
   gap: 12px;
   width: 60%;
   margin-bottom: 12px;
+  min-width: 0; /* Added to prevent overflow */
 }
 
 .Input-email {
@@ -68,6 +71,7 @@
   border-radius: 6px;
   font-size: 16px;
   outline: none;
+  min-width: 0; /* Added to prevent overflow */
 }
  
 .Input-email:focus {
@@ -85,6 +89,7 @@
   font-weight: 700;
   cursor: pointer;
   transition: background-color 0.2s;
+  white-space: nowrap; /* Added to prevent button text wrapping */
 }
 
 .Subscribe-button:hover {
@@ -109,6 +114,7 @@
   display: flex;
   gap: 48px;
   margin-top: 30px;
+  min-width: 0; /* Added to prevent overflow */
 }
 
 .Quick-text {
@@ -218,6 +224,7 @@
 @media (min-width: 1440px) {
   .footer-container {
     padding: 64px 48px;
+    width: 100%;
   }
   
   .sctt1 {
@@ -273,40 +280,77 @@
 
 /* Tablet (768px to 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
-  .footer-container {
-    padding: 36px 20px;
+    .footer-container {
+    padding: 40px 24px;
   }
   
   .sctt1 {
-    padding: 20px;
+    padding: 24px;
   }
   
   .footing {
-    flex-direction: column;
-    gap: 32px;
+    gap: 40px;
   }
-  
+
   .Newsletter {
     gap: 20px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
   }
-  
+  .Newsletter-header img {
+    max-height: 300px;
+    margin-left: 0;
+  }
   .Email-div {
-    width: 80%;
+    width: 100%;
   }
   
   .Deyah {
-    margin-left: 24px;
+    margin-left: 32px;
   }
   
   .Social-section {
-    flex-direction: row;
-    gap: 40px;
-    margin-top: 0;
+    gap: 32px;
   }
-  
-  .Newsletter-header img {
-    max-height: 300px;
+
+  .Quick-text, .follow-heading {
+    font-size: 16px;
+  }  
+
+  .De-links, .Subscribe-text {
+    font-size: 13px;
   }
+
+  .Deyah-heading {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .Bottom-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .power-text {
+    font-size: 10px;
+    font-weight: normal;
+    color: #141313c8;
+  }
+
+  .Bottom-footer-context {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.wrap {
+    display: flex;
+    gap: 12px;
+    font-size: 10px;
+}
+
 }
 
 /* Mobile Large (576px to 767px) */
@@ -320,7 +364,7 @@
   }
   
   .footing {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 28px;
   }
   
@@ -328,6 +372,11 @@
     width: 100%;
     flex-direction: column;
     gap: 8px;
+  }
+  
+  .Input-email {
+    padding: 10px 12px;
+    font-size: 14px;
   }
   
   .Subscribe-button {
@@ -340,6 +389,8 @@
   }
   
   .Social-section {
+    display: flex;
+    justify-content: space-between;
     flex-direction: column;
     gap: 24px;
     margin-top: 0;
@@ -371,7 +422,7 @@
   }
   
   .footing {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 24px;
   }
   
@@ -402,11 +453,14 @@
   
   .Deyah-heading {
     font-size: 14px;
+    text-align: center;
   }
   
   .Social-section {
-    flex-direction: column;
-    gap: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 100px;
     margin-top: 0;
   }
   
@@ -418,10 +472,23 @@
   .De-links {
     font-size: 14px;
   }
+
+  .Email-div {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .Input-email {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
   
   .Newsletter-header img {
     max-height: 200px;
   }
+
+  
   
   .Bottom-footer-context {
     flex-direction: column;
@@ -450,10 +517,19 @@
 @media (max-width: 375px) {
   .footer-container {
     padding: 20px 8px;
+    flex-direction: column-reverse;
   }
   
   .sctt1 {
     padding: 8px;
+  }
+
+  .Social-section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 100px;
+    margin-top: 0;
   }
   
   .Newsletter-header img {
@@ -462,6 +538,18 @@
   
   .Deyah-heading {
     font-size: 13px;
+    text-align: center;
+  }
+
+.Email-div {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .Input-email {
+    padding: 10px 12px;
+    font-size: 14px;
   }
   
   .Subscribe-text {
@@ -492,6 +580,31 @@
   }
 }
 
+@media (max-width: 320px) {
+  .Social-section {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    margin-top: 0;
+  }
+
+  .Email-div {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .Input-email {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  .Deyah-heading {
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
 /* Ultra-wide screens (1920px and up) */
 @media (min-width: 1920px) {
   .footer-container {
@@ -507,7 +620,14 @@
   }
   
   .Email-div {
-    width: 45%;
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .Input-email {
+    padding: 10px 12px;
+    font-size: 14px;
   }
   
   .Newsletter-header img {

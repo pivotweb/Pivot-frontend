@@ -80,7 +80,7 @@ const handleSubscribe = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => 
                 <h4 className="follow-heading">Follow us</h4>
                 <div className="footer-sct2">
                   <a 
-                    href="#" 
+                    href="https://www.facebook.com/share/16XPgu5zXL/" 
                     className="sos-icons"
                     aria-label="Facebook"
                   >

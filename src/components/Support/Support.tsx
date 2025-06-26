@@ -43,9 +43,11 @@ const Support = () => {
 
         <aside className='support-aside-container'>
             <div className='aside-context'>
-                <button className='myBtn1 support-btn'>Become a Strategic Partner</button>
-                <button className='myBtn2 support-btn'>Schedule a Call With Our Team</button>
-                <button className='myBtn2 support-btn'>Download Our Partner Deck</button>
+                <button className='myBtn1 support-btn'><a href="https://docs.google.com/forms/d/e/1FAIpQLSc51CdFXa605Vsxpu-CuqaJ-OKsPfMoO9jh16QafdH7r6JiNQ/viewform?usp=header">Become a Strategic Partner</a></button>
+                <button className='myBtn2 support-btn'>
+                <a href="tel:+2348164082120">Schedule a Call With Our Team</a>
+                </button>
+                <button className='myBtn2 support-btn'><a href="#">Download Our Partner Deck</a></button>
             </div>
         </aside>
     </div>

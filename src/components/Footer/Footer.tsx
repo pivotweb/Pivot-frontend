@@ -94,7 +94,7 @@ const handleSubscribe = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => 
                     <IoLogoInstagram  size={25} />
                   </a>
                   <a 
-                    href="#" 
+                    href="https://x.com/ThePivotNG?t=a1g56a7FCmtJr09y847sLQ&s=09" 
                     className="sos-icons"
                     aria-label="X (Twitter)"
                   >

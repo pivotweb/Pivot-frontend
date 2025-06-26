@@ -40,7 +40,7 @@
 
 .Newsletter-header img {
   max-height: 400px;
-  width: auto;
+  width: 180px;
   max-width: 100%; /* Added to prevent image overflow */
 }
 
@@ -581,6 +581,11 @@
 }
 
 @media (max-width: 320px) {
+  .Newsletter-header img{
+    margin-top: 10px;
+    margin-left: 35px;
+}
+
   .Social-section {
     flex-direction: row;
     display: flex;

@@ -15,7 +15,7 @@ const SCROLL_POS: Record<string, number> = {
   Home: 0,
   About: 1.33,
   "2025 Edition": 2.98,
-  "2024 Recap": 4.79,
+  "2014 Recap": 4.79,
   "Get Involved": 6.67,
   Gallery: 7.4,
   Contact: 10.2,

@@ -21,10 +21,10 @@ const Support = () => {
                 <h1 className='support-heading2'>How You Can Help</h1>
                 <div className='support-text2'>
                     <ul>
-                        <li>Fund tech kits and data bundles</li>
-                        <li>Sponsor mentorship cycles</li>
-                        <li>Provide venues, tools and software</li>
-                        <li>Underwrite the Pivot Conference showcase</li>
+                        <li>Fund tech kits and data bundles.</li>
+                        <li>Sponsor mentorship cycles.</li>
+                        <li>Provide venues, tools and software.</li>
+                        <li>Underwrite the Pivot Conference showcase.</li>
                     </ul>
                 </div>
             </div>

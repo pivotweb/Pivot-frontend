@@ -10,16 +10,17 @@ import Logo from '/images/logo2.jpeg';
 const SCROLL_POS: Record<string, number> = {
   Home: 0,
   About: 1.33,
-  "2025 Edition": 3,
-  "2024 Recap": 4.85,
-  "Get Involved": 6.75,
-  Gallery: 7.43,
-  Contact: 10.2,
+  "2025 Edition": 2.98,
+  "2024 Recap": 4.68,
+  "Get Involved": 6.4,
+  Gallery: 7,
+  Contact: 9.67,
 };
 
 const Footer = () => {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
 
   const isValidEmail = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -45,9 +46,21 @@ const Footer = () => {
     if (!email.trim() || !isValidEmail(email)) return;
 
     setIsLoading(true);
-    await subscribeToNewsletter(email);
+    const success = await subscribeToNewsletter(email);
+
+    if (success) {
+      setSuccessMessage('You’ve successfully subscribed to our newsletter! Thank you!');
+    } else {
+      setSuccessMessage('Oops! Something went wrong. Please try again.');
+    }
+
     setEmail('');
     setIsLoading(false);
+
+    // Auto-clear message after 5 seconds
+    setTimeout(() => {
+      setSuccessMessage('');
+    }, 3000);
   };
 
   const scrollToSection = (label: string) => {
@@ -89,6 +102,14 @@ const Footer = () => {
                     {isLoading ? 'Subscribing...' : 'Subscribe'}
                   </button>
                 </form>
+
+                {/* ✅ Success Message Display */}
+                {successMessage && (
+                  <p className="success-message" style={{ marginTop: '1rem', color: 'green' }}>
+                    {successMessage}
+                  </p>
+                )}
+
                 <p className="Subscribe-text">
                   By subscribing you agree to our Privacy Policy
                   and provide <br /> consent to receive updates from our company.
@@ -156,4 +177,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer; 

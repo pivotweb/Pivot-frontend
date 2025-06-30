@@ -1,68 +1,102 @@
 import React, { useState } from 'react';
 import './Footer.css';
+
+// Social media icons
 import { FaFacebook } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io5";
 import { FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+
+// Logo image
 import Logo from '/images/logo2.jpeg';
 
-// Scroll positions for each section
+// Scroll positions for smooth navigation
 const SCROLL_POS: Record<string, number> = {
   Home: 0,
   About: 1.33,
   "2025 Edition": 2.98,
-  "2024 Recap": 4.68,
-  "Get Involved": 6.4,
-  Gallery: 7,
-  Contact: 9.67,
+  "2024 Recap": 4.79,
+  "Get Involved": 6.67,
+  Gallery: 7.4,
+  Contact: 10.2,
 };
 
 const Footer = () => {
+  // Form state
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
+  // Email validation using regex
   const isValidEmail = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
+  // Function to send email to backend API
   const subscribeToNewsletter = async (email: string) => {
     try {
-      const response = await fetch('/api/newsletter/subscribe', {
+      const response = await fetch('https://pivot-1.onrender.com/api/email/send-welcome', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({
+          email,
+          firstName: "Subscriber", 
+          link: "https://thepivot.ng/newsletter-confirmed"
+        }),
       });
-      return response.ok;
+
+      return response.ok; 
+
     } catch (error) {
       console.error('Subscription error:', error);
       return false;
     }
   };
 
+  // Form submit handler
   const handleSubscribe = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email.trim() || !isValidEmail(email)) return;
+    e.preventDefault(); // Prevent page reload on form submit
 
+    // Basic validation
+    if (!email.trim()) {
+      setErrorMessage('Email is required.');
+      setSuccessMessage('');
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      setErrorMessage('Please enter a valid email address.');
+      setSuccessMessage('');
+      return;
+    }
+
+    // Clear previous error
+    setErrorMessage('');
     setIsLoading(true);
+
+    // Send email to server
     const success = await subscribeToNewsletter(email);
 
     if (success) {
-      setSuccessMessage('You’ve successfully subscribed to our newsletter! Thank you!');
+      setSuccessMessage('You’ve successfully subscribed! Please check your inbox.');
     } else {
       setSuccessMessage('Oops! Something went wrong. Please try again.');
     }
 
+    // Reset form state
     setEmail('');
     setIsLoading(false);
 
-    // Auto-clear message after 5 seconds
+    // Clear messages after 5 seconds
     setTimeout(() => {
       setSuccessMessage('');
-    }, 3000);
+      setErrorMessage('');
+    }, 5000);
   };
 
+  // Scroll to sections smoothly using the mapped scroll multipliers
   const scrollToSection = (label: string) => {
     const multiplier = SCROLL_POS[label];
     const y = window.innerHeight * multiplier;
@@ -74,7 +108,7 @@ const Footer = () => {
       <div className="footer-context">
         <div className="sctt1">
           <div className="footing">
-            {/* LEFT: Newsletter */}
+            {/* LEFT: Newsletter Section */}
             <div className="Newsletter">
               <div className="Newsletter-header">
                 <img src={Logo} alt="Logo" />
@@ -82,6 +116,8 @@ const Footer = () => {
 
               <div className="Deyah">
                 <h3 className="Deyah-heading">Join our Newsletter to stay updated</h3>
+
+                {/* Newsletter Form */}
                 <form onSubmit={handleSubscribe} className="Email-div">
                   <input
                     type="email"
@@ -103,7 +139,12 @@ const Footer = () => {
                   </button>
                 </form>
 
-                {/* ✅ Success Message Display */}
+                {/* Message displays */}
+                {errorMessage && (
+                  <p className="error-message" style={{ marginTop: '1rem', color: 'red' }}>
+                    {errorMessage}
+                  </p>
+                )}
                 {successMessage && (
                   <p className="success-message" style={{ marginTop: '1rem', color: 'green' }}>
                     {successMessage}
@@ -117,7 +158,7 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* RIGHT: Quick Links */}
+            {/* RIGHT: Quick Links and Social Media */}
             <aside className="Social-section">
               <div>
                 <h4 className="Quick-text">Quick Links</h4>
@@ -127,7 +168,12 @@ const Footer = () => {
                       <button
                         onClick={() => scrollToSection(label)}
                         className="De-links"
-                        style={{ background: "none", border: "none", cursor: "pointer", padding: 0 }}
+                        style={{
+                          background: "none",
+                          border: "none",
+                          cursor: "pointer",
+                          padding: 0,
+                        }}
                       >
                         {label}
                       </button>
@@ -159,7 +205,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Footer */}
+      {/* Bottom Footer Section */}
       <div className="Bottom-footer">
         <div className="Bottom-footer-context">
           <div className="power-text">
@@ -177,4 +223,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;

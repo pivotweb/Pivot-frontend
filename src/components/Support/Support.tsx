@@ -1,6 +1,6 @@
 // import React from 'react';
-
-import Pconference from '/images/Pconference.png'
+import subimage from '/images/subimage.png'
+// import Pconference from '/images/Pconference.png'
 import './Support.css'
 
 const Support = () => {
@@ -12,7 +12,7 @@ const Support = () => {
         </div>
 
         <div>
-            <img src={Pconference} alt="Pivot conference" />
+            <img src={subimage} alt="Pivot conference" />
         </div>
 
         <div className='support-context2'>

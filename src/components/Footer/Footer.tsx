@@ -14,11 +14,11 @@ import Logo from '/images/logo2.jpeg';
 const SCROLL_POS: Record<string, number> = {
   Home: 0,
   About: 1.33,
-  "2025 Edition": 2.98,
-  "2024 Recap": 4.79,
-  "Get Involved": 6.67,
-  Gallery: 7.4,
-  Contact: 10.2,
+  "2025 Edition": 2.88,
+  "2024 Recap": 4.68,
+  "Get Involved": 6.45,
+  Gallery: 7.12,
+  Contact: 9.68,
 };
 
 const Footer = () => {

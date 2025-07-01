@@ -28,11 +28,25 @@ type ButtonProps = {
   title: string
   style?: string
   link?: string // Optional route path
+  downloadLink?: string // File download path
 } & React.ButtonHTMLAttributes<HTMLButtonElement>
 
-const Button: React.FC<ButtonProps> = ({ title, style = '', link, ...rest }) => {
+const Button: React.FC<ButtonProps> = ({ title, style = '', link, downloadLink, ...rest }) => {
   const baseClasses =
     'cursor-pointer rounded-lg font-semibold shadow-md transition-colors duration-200 text-center text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50'
+
+  if (downloadLink) {
+    return (
+      <a
+        href={downloadLink}
+        download
+        className={`${baseClasses} ${style}`}
+      >
+        {title}
+      </a>
+    )
+  }
+  
 
   // If `link` is provided, render a <Link> styled like a button
   if (link) {

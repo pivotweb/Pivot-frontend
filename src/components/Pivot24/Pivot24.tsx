@@ -7,7 +7,7 @@ export const Pivot24 = () => {
         </div>
         <div className="my-10 md:my-15 flex flex-col gap-5">
             <div className="w-full h-[350px] md:h-[400px] overflow-hidden">
-                <img src="images/pivot1.jpg" alt="" className="w-full h-full object-cover rounded-2xl"/>
+                <img src="images/pivot1.jpg" alt="" className="w-full h-full object-[25%_25%] object-cover rounded-2xl"/>
             </div>
             <div className="flex gap-5">
                 <div className="w-1/2 h-[250px] md:h-[400px] overflow-hidden">

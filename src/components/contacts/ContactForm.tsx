@@ -6,24 +6,112 @@ import InfoItem from "./InfoItem";
 import SocialIcons from "./SocialIcons";
 import Button from "../ui/Button";
 import { FaGlobe } from "react-icons/fa6";
+import axios from "axios";
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+interface ApiResponse {
+  success: boolean;
+  message: string;
+  data?: any;
+}
 
 const ContactSection: React.FC = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+
+    // Clear status when user starts typing
+    if (submitStatus.type) {
+      setSubmitStatus({ type: null, message: '' });
+    }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted", formData);
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      console.log('Sending data:', formData);
+
+      // Temporary CORS proxy for testing - remove this in production
+      // const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+      // const apiUrl = proxyUrl + 'https://pivot-9x7i.onrender.com/api/contact';
+
+      const response = await axios.post('https://pivot-1.onrender.com/api/contact', formData, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        timeout: 10000, // 10 seconds timeout
+      });
+
+      console.log('Response received:', response);
+
+      if (response.status === 200 || response.status === 201) {
+        setSubmitStatus({
+          type: 'success',
+          message: response.data.message || 'Message sent successfully!'
+        });
+
+        // Reset form on success
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      }
+    } catch (error) {
+      console.error('Full error object:', error);
+      let errorMessage = 'An error occurred. Please try again.';
+
+      if (axios.isAxiosError(error)) {
+        console.log('Axios error details:', {
+          message: error.message,
+          code: error.code,
+          response: error.response,
+          request: error.request
+        });
+
+        if (error.response) {
+          // Server responded with error status (4xx, 5xx)
+          console.log('Response error:', error.response.status, error.response.data);
+          errorMessage = error.response.data?.message || `Server Error: ${error.response.status}`;
+        } else if (error.request) {
+          // Request made but no response received (network/CORS issues)
+          console.log('Request error - no response received');
+          errorMessage = 'CORS or Network error. Check if the API allows requests from your domain.';
+        } else {
+          // Something else happened
+          errorMessage = error.message;
+        }
+      }
+
+      setSubmitStatus({
+        type: 'error',
+        message: errorMessage
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -84,8 +172,9 @@ const ContactSection: React.FC = () => {
             />
 
             <Button
-              title="Submit"
+              title={isSubmitting ? "Sending..." : "Submit"}
               type="submit"
+              disabled={isSubmitting}
               style="bg-[#F06621] hover:bg-[#F6A37A] px-10 py-3 md:w-max self-start w-full"
             />
           </form>

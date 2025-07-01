@@ -73,7 +73,7 @@ export const Edition25 = () => {
 
                 <nav className="flex w-full md:flex-row flex-col my-15 justify-center items-center gap-5 md:gap-10">
                     <Button title="Apply Now" style={"bg-[#F06621] hover:bg-[#F6A37A] w-full md:w-1/2 py-4"} link="https://docs.google.com/forms/d/e/1FAIpQLSc51CdFXa605Vsxpu-CuqaJ-OKsPfMoO9jh16QafdH7r6JiNQ/viewform?usp=header"/>
-                    <Button title="Download Full Program Brochure" style={"bg-black hover:bg-[#4B3D34] w-full md:w-1/2 py-4"}/>
+                    <Button title="Download Full Program Brochure" style={"bg-black hover:bg-[#4B3D34] w-full md:w-1/2 py-4"} downloadLink="/brochure.pdf"/>
                 </nav>
             </main>
         </section>

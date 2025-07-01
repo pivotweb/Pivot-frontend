@@ -1,5 +1,5 @@
 .footer-container {
-  padding: 48px 32px;
+  padding: 48px 0px;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   width: 100%; /* Added to ensure full width up to max-width */
@@ -142,7 +142,7 @@
 }
 
 .De-links:hover {
-  color: #374151;
+  color: #F06621;
 }
 
 .follow-heading {
@@ -189,6 +189,10 @@
 
 .footer-sct2 a[aria-label="YouTube"] {
   color: #000;
+}
+
+.footer-sct2 a:hover{
+  color: #F06621;
 }
 
 .Bottom-footer-context {
@@ -276,6 +280,11 @@
   .Social-section {
     gap: 32px;
   }
+
+  .Newsletter-header img {
+    max-height: 300px;
+    margin-left: 25px;
+  }
 }
 
 /* Tablet (768px to 991px) */
@@ -301,7 +310,7 @@
   }
   .Newsletter-header img {
     max-height: 300px;
-    margin-left: 0;
+    margin-left: 25px;
   }
   .Email-div {
     width: 100%;

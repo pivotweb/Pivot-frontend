@@ -1,6 +1,6 @@
 // import React from 'react';
-
-import Pconference from '/images/Pconference.png'
+import subimage from '/images/subimage.png'
+// import Pconference from '/images/Pconference.png'
 import './Support.css'
 
 const Support = () => {
@@ -12,19 +12,25 @@ const Support = () => {
         </div>
 
         <div>
-            <img src={Pconference} alt="Pivot conference" />
+            <img src={subimage} alt="Pivot conference" />
         </div>
 
         <div className='support-context2'>
         <div className='support-content-left'>
             <div className='support-context2-text text-center md:text-start'>
                 <h1 className='support-heading2'>How You Can Help</h1>
-                <div className='support-text2 '>
+                {/* <div className='support-text2 '>
                     <ul className='text-center flex flex-col items-center md:text-left md:block md:items-start'>
                         <li>Fund tech kits and data bundles</li>
                         <li>Sponsor mentorship cycles</li>
                         <li>Provide venues, tools and software</li>
-                        <li>Underwrite the Pivot Conference showcase</li>
+                        <li>Underwrite the Pivot Conference showcase</li> */}
+                <div className='support-text2'>
+                    <ul>
+                        <li>Fund tech kits and data bundles.</li>
+                        <li>Sponsor mentorship cycles.</li>
+                        <li>Provide venues, tools and software.</li>
+                        <li>Underwrite the Pivot Conference showcase.</li>
                     </ul>
                 </div>
             </div>

@@ -96,7 +96,7 @@ const Footer = () => {
     setTimeout(() => {
       setSuccessMessage('');
       setErrorMessage('');
-    }, 5000);
+    }, 4000);
   };
 
   // Scroll to sections smoothly using the mapped scroll multipliers

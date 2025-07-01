@@ -14,7 +14,7 @@ export const Pivot24 = () => {
                     <img src="images/pivot2.jpg" alt="" className="w-full h-full object-cover rounded-2xl"/>
                 </div>
                 <div className="w-1/2 h-[250px] md:h-[400px] overflow-hidden">
-                    <img src="images/pivot3.jpg" alt="" className="w-full h-full object-cover rounded-2xl"/>
+                    <img src="images/pivot3.jpg" alt="" className="w-full h-full object-cover md:object-center object-right rounded-2xl"/>
                 </div>
                 </div>
         </div>

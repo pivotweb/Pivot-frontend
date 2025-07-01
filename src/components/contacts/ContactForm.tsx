@@ -14,11 +14,11 @@ interface FormData {
   message: string;
 }
 
-interface ApiResponse {
-  success: boolean;
-  message: string;
-  data?: any;
-}
+// interface ApiResponse {
+//   success: boolean;
+//   message: string;
+//   data?: any;
+// }
 
 const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({

@@ -13,7 +13,7 @@ const Input: React.FC<InputProps> = ({ label, id, placeholder, ...props }) => (
                     </label>
                     <input placeholder={placeholder}
                               id={id}
-                              className="w-full rounded-md border border-gray-300 px-4 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                              className="w-full rounded-md border border-black-300 px-4 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500 h-15"
                               {...props}
                     />
           </div>
